@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"县掌门"招商分析平台</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>"县掌门"招商分析平台</h1>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label>时间范围：</label>
+                <select id="timeRange">
+                    <option value="all">全部</option>
+                    <option value="last3months">近3个月</option>
+                    <option value="last6months">近6个月</option>
+                    <option value="lastyear">近1年</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>区域筛选：</label>
+                <select id="regionFilter">
+                    <option value="all">全部地区</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="chart-container">
+                <h2>成功县域特征分析</h2>
+                <div id="countyAnalysis" class="chart"></div>
+            </div>
+            <div class="chart-container">
+                <h2>县掌门画像分析</h2>
+                <div id="masterProfile" class="chart"></div>
+            </div>
+            <div class="chart-container">
+                <h2>优秀诊所画像分析</h2>
+                <div id="clinicProfile" class="chart"></div>
+            </div>
+            <div class="chart-container">
+                <h2>优秀巡诊人员画像分析</h2>
+                <div id="doctorProfile" class="chart"></div>
+            </div>
+            <div class="chart-container">
+                <h2>招商趋势分析</h2>
+                <div id="recruitmentTrend" class="chart"></div>
+            </div>
+            <div class="chart-container">
+                <h2>销售业绩分析</h2>
+                <div id="salesPerformance" class="chart"></div>
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <h2>关键发现</h2>
+            <div id="keyFindings" class="findings-container">
+                <!-- 将由JavaScript动态填充 -->
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+        <p>数据加载中...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
